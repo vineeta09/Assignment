@@ -1,0 +1,24 @@
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int cookies = sc.nextInt();
+        int m = sc.nextInt();
+        int c = 0;
+        PriorityQueue<Integer> p = new PriorityQueue<Integer>(cookies);
+        for(int i = 0; i <cookies; i++){
+            int sweetness = sc.nextInt();
+            p.add(sweetness);
+        }
+        while(p.peek() < m && p.size() > 1){
+            int ne = p.poll() + 2*p.poll();
+            p.add(ne);
+            c++;
+        }
+        if(p.peek() >= m){
+            System.out.println(c);
+        } else{
+            System.out.println(-1);
+        }
+    }
+}
