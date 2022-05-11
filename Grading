@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		List<Integer> l1=new ArrayList<>();
+		l1.add(73);
+		l1.add(67);
+		l1.add(38);
+		l1.add(33);
+		int j;
+		for(Integer ele:l1){
+		    if(ele>=38){
+		        for(j=ele+1;j<ele+4;j++){
+		            if(j%5==0)
+		                break;
+		        }
+		        if(j-ele<3)
+		            ele=j;
+		    }
+		}
+		System.out.println(l1);
+	}
+}
+
+
