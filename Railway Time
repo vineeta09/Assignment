@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+		int i,a;
+		if(x<=8)
+		    System.out.println(15+x);
+		else if(x>=9 && x<=32)
+		    System.out.println(Math.abs(9-x));
+		 else if(x>=33){
+		     a=(x+15)%24;
+		     System.out.println(a);
+		 }
+}
